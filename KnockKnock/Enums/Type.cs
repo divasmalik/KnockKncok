@@ -5,6 +5,6 @@
         Scalene,
         Isosceles,
         Equilateral,
-        nonExistant
+        Error
     }
 }

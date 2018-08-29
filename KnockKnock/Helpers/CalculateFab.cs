@@ -28,6 +28,10 @@ namespace KnockKnock.Helpers
             else
             {
                 var res = CalculateNthFibonaci(n);
+                if(n<0 && n%2==0)
+                {
+                    res = -res;
+                }
                 return res;
             }
             
@@ -37,10 +41,12 @@ namespace KnockKnock.Helpers
         {
             double sqrt5 = Math.Sqrt(5);
             double posPhi = (sqrt5 + 1) / 2;
-            double negPhi = (1 - sqrt5) / 2;
-            var result = ((Math.Pow(posPhi, n) - (Math.Pow(negPhi, n))) / sqrt5);
-            var res = Math.Round(result);
-            return (Int64)res;
+            //double negPhi = (1 - sqrt5) / 2;
+            //var result = ((Math.Pow(posPhi, n) - (Math.Pow(negPhi, n))) / sqrt5);
+            //var res = Math.Round(result);
+            var i = Math.Abs(n);
+            var res = Math.Pow(posPhi, i)/ sqrt5;
+            return (long)res;
         }
         
     }

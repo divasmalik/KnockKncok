@@ -7,9 +7,9 @@ namespace KnockKnock.Helpers
 
         public Type GetTriangleType(int a, int b, int c)
         {
-            var type = Type.nonExistant;
+            var type = Type.Error;
 
-            if (!IsValidTriangle(a,b,c)) { return Type.nonExistant; };
+            if (!IsValidTriangle(a,b,c)) { return Type.Error; };
 
             if (IsEquilateral(a, b, c)) { return  Type.Equilateral; };
 
