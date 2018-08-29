@@ -219,6 +219,7 @@
     <Compile Include="Controllers\FabonnaciController.cs" />
     <Compile Include="Controllers\ReverseStringController.cs" />
     <Compile Include="Controllers\TriangleTypeController.cs" />
+    <Compile Include="Controllers\TokenController.cs" />
     <Compile Include="Enums\Type.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

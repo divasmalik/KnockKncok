@@ -6,11 +6,11 @@ using KnockKnock.Helpers;
 
 namespace KnockKnock.Controllers
 {
-    public class FabonnaciController : ApiController
+    public class FibonnaciController : ApiController
     {
-        [Route("api/Fabonacci")]
+        [Route("api/Fibonacci")]
         [HttpGet]
-        public HttpResponseMessage Get(Int64? n)
+        public HttpResponseMessage Get(long? n)
         {
             HttpResponseMessage res = null;
                 var fab = new CalculateFab();

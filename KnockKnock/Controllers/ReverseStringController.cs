@@ -17,8 +17,10 @@ namespace KnockKnock.Controllers
             var rvr_str = new ReverserStringHelper();
             try
             {
+
                 var result = rvr_str.ReverseString(sentence);
                 res = Request.CreateResponse(HttpStatusCode.OK, result);
+
                 return res;
             }
             catch (Exception ex)

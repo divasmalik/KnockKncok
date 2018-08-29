@@ -24,7 +24,8 @@ namespace KnockKnock.Controllers
             catch (Exception ex)
             {
                 {
-                    res = Request.CreateResponse(HttpStatusCode.InternalServerError, ex);
+                    HttpError err = new HttpError("The request is invalid.");
+                    res = Request.CreateErrorResponse(HttpStatusCode.BadRequest, err);
                 }
                 return res;
             }
