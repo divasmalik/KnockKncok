@@ -14,11 +14,10 @@ namespace KnockKnock.Controllers
         public HttpResponseMessage Get(string sentence="")
         {
             HttpResponseMessage res = null;
-            var rvr_str = new ReverserStringHelper();
+
             try
             {
-
-                var result = rvr_str.ReverseString(sentence);
+                var result = ReverserStringHelper.ReverseString(sentence);
                 res = Request.CreateResponse(HttpStatusCode.OK, result);
 
                 return res;

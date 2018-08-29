@@ -5,7 +5,7 @@ using System.Web.Http;
 using KnockKnock.Helpers;
 
 namespace KnockKnock.Controllers
-{
+{   
     public class FibonnaciController : ApiController
     {
         [Route("api/Fibonacci")]
@@ -13,9 +13,8 @@ namespace KnockKnock.Controllers
         public HttpResponseMessage Get(long? n)
         {
             HttpResponseMessage res = null;
-                var fab = new CalculateFab();
             try{
-                var result = fab.GetNthFibonacci((long)n);
+                var result = CalculateFab.GetNthFibonacci((long)n);
                 res = Request.CreateResponse(HttpStatusCode.OK, result);
                 return res;
             }

@@ -5,9 +5,9 @@ using System.Web;
 
 namespace KnockKnock.Helpers
 {
-    public class ReverserStringHelper
+    public static class ReverserStringHelper
     {
-        public string ReverseString(string str)
+        public static string ReverseString(string str)
         {
             var reversedWords = string.Join(" ",
                                         str.Split(' ')

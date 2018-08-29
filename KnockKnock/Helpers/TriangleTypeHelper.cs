@@ -2,10 +2,10 @@
 
 namespace KnockKnock.Helpers
 {
-    public class TriangleTypeHelper
+    public static class TriangleTypeHelper
     {
 
-        public Type GetTriangleType(int a, int b, int c)
+        public static Type GetTriangleType(int a, int b, int c)
         {
             var type = Type.Error;
 
@@ -19,7 +19,7 @@ namespace KnockKnock.Helpers
 
             return type;
         }
-        private bool IsValidTriangle(int a, int b, int c)
+        private static bool IsValidTriangle(int a, int b, int c)
         {
             if ((a <= 0 || b <= 0 || c <= 0)|| (a + b <= c || b + c <= a || a + c <= b))
             {
@@ -28,7 +28,7 @@ namespace KnockKnock.Helpers
             return true;
         }
 
-        private bool IsEquilateral(int a,int b,int c)
+        private static bool IsEquilateral(int a,int b,int c)
         {
             if (a == b && b == c)
             {
@@ -37,7 +37,7 @@ namespace KnockKnock.Helpers
             return false;
         }
 
-        private bool IsIssoceles(int a, int b, int c)
+        private static bool IsIssoceles(int a, int b, int c)
         {
             if (a == b || b == c || a == c)
             {
@@ -46,7 +46,7 @@ namespace KnockKnock.Helpers
             return false;
         }
 
-        private bool IsScalene(int a, int b, int c)
+        private static bool IsScalene(int a, int b, int c)
         {
             if (a != b && a != c && b != c)
             {

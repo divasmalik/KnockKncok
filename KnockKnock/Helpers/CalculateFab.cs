@@ -2,12 +2,12 @@
 
 namespace KnockKnock.Helpers
 {
-    public class CalculateFab
+    public static class CalculateFab
     {
 
-        private readonly Int64 maxLimit = 92;
+        private static readonly Int64 maxLimit = 92;
 
-        public bool IsInLimit(Int64 n)
+        public static bool IsInLimit(Int64 n)
         {
             if (n > maxLimit || n < -maxLimit)
             {
@@ -19,7 +19,7 @@ namespace KnockKnock.Helpers
             }
         }
 
-        public Int64 GetNthFibonacci(Int64 n)
+        public static Int64 GetNthFibonacci(Int64 n)
         {
             if (!IsInLimit(n))
             {
@@ -37,15 +37,12 @@ namespace KnockKnock.Helpers
             
         }
 
-        private Int64 CalculateNthFibonaci(Int64 n)
+        private static Int64 CalculateNthFibonaci(Int64 n)
         {
             double sqrt5 = Math.Sqrt(5);
-            double posPhi = (sqrt5 + 1) / 2;
-            //double negPhi = (1 - sqrt5) / 2;
-            //var result = ((Math.Pow(posPhi, n) - (Math.Pow(negPhi, n))) / sqrt5);
-            //var res = Math.Round(result);
+            double Phi = (sqrt5 + 1) / 2;
             var i = Math.Abs(n);
-            var res = Math.Pow(posPhi, i)/ sqrt5;
+            var res = Math.Pow(Phi, i)/ sqrt5;
             return (long)res;
         }
         

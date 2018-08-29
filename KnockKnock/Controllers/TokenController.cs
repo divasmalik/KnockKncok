@@ -19,7 +19,6 @@ namespace KnockKnock.Controllers
             try
             {
                 res = Request.CreateResponse(HttpStatusCode.OK, Token);
-
                 return res;
             }
             catch (Exception ex)

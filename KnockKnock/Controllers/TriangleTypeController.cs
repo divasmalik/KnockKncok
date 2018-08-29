@@ -14,10 +14,10 @@ namespace KnockKnock.Controllers
         public HttpResponseMessage Get(int? a, int? b, int? c)
         {
             HttpResponseMessage res = null;
-            var triangleType = new TriangleTypeHelper();
+
             try
             {
-                var result = triangleType.GetTriangleType((int)a, (int)b, (int)c);
+                var result = TriangleTypeHelper.GetTriangleType((int)a, (int)b, (int)c);
                 res = Request.CreateResponse(HttpStatusCode.OK, result.ToString());
                 return res;
             }
